@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript function to check whether a given value is US zip code or not</title>
+</head>
+<body>
+    <form>
+        <input id="text" placeholder="Email" type="text">
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+    <script>
+        function validate(){
+            var mail = document.getElementById("text").value;
+            var regx = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if(regx.test(mail)){
+                alert("email hợp lệ")
+                return true
+            } else {
+                alert("email Không hợp lệ")
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
